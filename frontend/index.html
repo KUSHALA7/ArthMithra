@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ArthMitra — AI Money Mentor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/styles/main.css"/>
+  <script>
+    // Initialize theme immediately to prevent flash
+    (function() {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay hidden" id="loading">
+    <div class="loader-ring"></div>
+    <div class="loading-msg" id="loading-msg">ArthMitra AI is thinking...</div>
+  </div>
+
+  <!-- Header -->
+  <header class="hdr">
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="logo">
+      <div class="logo-mark">₹</div>
+      <span class="logo-text">Arth<em>Mitra</em></span>
+    </div>
+    <div class="hdr-right">
+      <div class="ai-live-badge">AI Live</div>
+      <div class="score-pill" id="hdr-score">Score: —</div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- App Shell -->
+  <div class="app">
+    <!-- Sidebar injected by Sidebar.js -->
+    <nav class="sidebar" id="sidebar"></nav>
+
+    <!-- Main content — pages injected here -->
+    <main class="main" id="main"></main>
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-item" data-page="dashboard">
+      <span class="mobile-nav-icon">📊</span>
+      <span class="mobile-nav-label">Home</span>
+    </button>
+    <button class="mobile-nav-item" data-page="health">
+      <span class="mobile-nav-icon">💚</span>
+      <span class="mobile-nav-label">Health</span>
+    </button>
+    <button class="mobile-nav-item" data-page="mentor">
+      <span class="mobile-nav-icon">🤖</span>
+      <span class="mobile-nav-label">AI</span>
+    </button>
+    <button class="mobile-nav-item" data-page="tax">
+      <span class="mobile-nav-icon">🧾</span>
+      <span class="mobile-nav-label">Tax</span>
+    </button>
+    <button class="mobile-nav-item" data-page="auth">
+      <span class="mobile-nav-icon">👤</span>
+      <span class="mobile-nav-label">Account</span>
+    </button>
+  </nav>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
