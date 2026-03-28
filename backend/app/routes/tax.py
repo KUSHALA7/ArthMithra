@@ -7,12 +7,12 @@ router = APIRouter()
 
 class TaxRequest(BaseModel):
     profile: dict
-    grossSalary: float = 0
-    invested80c: float = 0
-    npsContribution: float = 0
-    premium80d: float = 0
-    homeLoanInterest: float = 0
-    hraExemption: float = 0
+    grossSalary: float = 0.0
+    invested80c: float = 0.0
+    npsContribution: float = 0.0
+    premium80d: float = 0.0
+    homeLoanInterest: float = 0.0
+    hraExemption: float = 0.0
 
 @router.post("/analyse")
 async def analyse_tax(req: TaxRequest):

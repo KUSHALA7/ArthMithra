@@ -9,12 +9,12 @@ class CoupleRequest(BaseModel):
     profile: dict
     partnerAName: str = "Partner A"
     partnerBName: str = "Partner B"
-    partnerAIncome: float = 0
-    partnerBIncome: float = 0
-    partnerA80c: float = 0
-    partnerB80c: float = 0
-    partnerANps: float = 0
-    partnerBNps: float = 0
+    partnerAIncome: float = 0.0
+    partnerBIncome: float = 0.0
+    partnerA80c: float = 0.0
+    partnerB80c: float = 0.0
+    partnerANps: float = 0.0
+    partnerBNps: float = 0.0
     hraWho: str = "neither"
 
 @router.post("/optimise")
